@@ -122,18 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    checkbox.addEventListener('mouseover', function() {
-      if (!checkbox.checked) {
-        sec[i].style.backgroundColor = "rgb(253, 69, 86)";
-      }
-    });
-
-    checkbox.addEventListener('mouseout', function() {
-      if (!checkbox.checked) {
-        sec[i].style.backgroundColor = "rgb(15, 25, 35)";
-      }
-    });
-
     // Set initial state
     if (checkbox.checked) {
       sec[i].style.backgroundColor = "rgb(253, 69, 86)";
@@ -143,6 +131,29 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+  let divisionsPri = document.getElementsByClassName("division-pri");
+  let pri = document.getElementsByClassName("name-pri");
+
+  for (let i = 0; i < divisionsPri.length; i++) {
+    let checkbox = divisionsPri[i].querySelector('input[type="checkbox"]');
+
+    checkbox.addEventListener('change', function() {
+      if (checkbox.checked) {
+        pri[i].style.backgroundColor = "rgb(253, 69, 86)";
+      } else {
+        pri[i].style.backgroundColor = "rgb(15, 25, 35)";
+      }
+    });
+
+    // Set initial state
+    if (checkbox.checked) {
+      pri[i].style.backgroundColor = "rgb(253, 69, 86)";
+    } else {
+      pri[i].style.backgroundColor = "rgb(15, 25, 35)";
+    }
+  }
+});
 
 document.addEventListener('blur', function (event) {
   const isValid = event.target.validty.valid;

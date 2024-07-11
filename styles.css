@@ -424,6 +424,15 @@ html {
     align-items: center;
   }
 
+  .division-pri {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    overflow: hidden;
+  }
+
+
   input[type="checkbox"][id^="primary"] {
     display: none;
   }
