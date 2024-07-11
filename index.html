@@ -6,6 +6,7 @@
     <title>Survey Form</title>
     <link rel="icon" type="image/x-icon" href="assets/V_Logomark_Red.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body class="background-img ">
   <h1>Valorant Survey</h1>
@@ -27,7 +28,7 @@
       <p><input id="email" placeholder="E-mail..." onforminput="validateEmail()" oninput="this.className = ''" name="email" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></p>
     </div>
     <div id="map" class="tab">
-      <p>Select at least one of your favorite map(s):</p>
+      <p class="center">Select at least one of your favorite map(s):</p>
       <div class="map-img">
         <ul id="maps-list">
           <div class="map-img">
@@ -50,7 +51,7 @@
       </div>
     </div>
     <div id="character" class="tab">
-      <p>Select at least one of your favorite character(s):</p>
+      <p class="center">Select at least one of your favorite character(s):</p>
       <ul id="char-list">
         <div id="grid-layout-char">
           <div class="division">
@@ -201,7 +202,7 @@
       </ul>
     </div>
     <div id="pistol" class="tab">
-      <p>Select at least one of your favorite secondary weapon(s):</p>
+      <p class="center">Select at least one of your favorite secondary weapon(s):</p>
       <ul id="pistols">
         <div id="grid-layout-sec">
         <div class="division-weap">
@@ -238,7 +239,7 @@
       </ul>
     </div>
     <div id="primary" class="tab">
-      <p>Select at least one of your favorite primary weapon(s):</p>
+      <p class="center">Select at least one of your favorite primary weapon(s):</p>
       <ul id="primaries">
         <div id="grid-layout-pri">
         <div class="division-pri">

@@ -1,0 +1,117 @@
+ @media screen and (min-width: 1028px) and (max-width: 1420px) {
+    #survey-form {
+        width: 60%;
+    }
+
+    #content {
+        width: 60%;
+    }
+
+    
+    #grid-layout-char {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .name {
+        font-size: 1.2rem;
+        padding: 0px;
+        align-content: center;
+        min-height: 3vh;
+    }
+
+    .name-pri {
+        font-size: 1.1rem;
+    }
+
+    :checked + label[for^="map"]:before {
+        font-size: 1em;
+    }
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1027px) {
+    #survey-form {
+        width: 70%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #content {
+        width: 70%;
+    }
+
+    
+    #grid-layout-char {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .name {
+        font-size: 1rem;
+        padding: 0px;
+        align-content: center;
+        min-height: 3vh;
+    }
+    
+    .name-pri {
+        font-size: 1rem;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    :checked + label[for^="map"]:before {
+        font-size: 0.9em;
+    }
+ }
+
+
+ @media screen and (max-width: 767px) {
+    #survey-form {
+        width: 70%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #content {
+        width: 70%;
+    }
+
+    #grid-layout-char {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .name {
+        font-size: 0.9rem;
+        padding: 0px;
+        align-content: center;
+        min-height: 3vh;
+    }
+
+    .name-sec {
+        font-size: 1rem;
+    }
+
+    #grid-layout-pri {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .name-pri {
+        font-size: 1rem;
+    }
+
+    input {
+        text-align: center;
+    }
+
+    :checked + label[for^="map"]:before {
+        font-size: 0.8em;
+    }
+
+    :checked + label[for^="map"] img {
+        border: 4px solid var(--color-red-light);
+    }
+ }

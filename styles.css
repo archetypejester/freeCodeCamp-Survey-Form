@@ -67,6 +67,10 @@ html {
     margin-bottom: 15px;
     font-weight: 600;
   }
+
+  .center {
+    text-align: center;
+  }
   
   #img, .step-align {
     display: flex;
@@ -247,7 +251,6 @@ html {
 
   #grid-layout-char {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     grid-template-columns: repeat(6, 1fr);
     gap: 5px;
   }
