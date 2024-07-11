@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-img ">
+  <h1>Valorant Survey</h1>
+  <p style="text-align: center; color:white">Let us know your experience with Valorant!</p>
+  <form id="survey-form" method="POST" action="https://formsubmit.co/contadotrove20@gmail.com">
+    <div id="img">
+      <img class="vlr-logo" src="assets/valorant-logos/Full Color/Logotype & Mark/V_Logomark_Red.png">
+    </div>
+    <div id="profile-info" class="tab">
+      <p>Name:</p>
+      <input required id="fname" placeholder="Your name..." oninput="this.className = ''" name="fname">
+      <span id="fname-validation" aria-live="assertive" class="validation-message"></span>
+      <p>Riot id:</p>
+      <input required id="vtag" placeholder="Your riot id..." oninput="this.className = ''" name="vtag" autocomplete="off" pattern="#" minlength="3">
+      <span id="vtag-validation" aria-live="assertive" class="validation-message"></span>
+    </div>
+    <div id="contact-info" class="tab scrollm-">
+      <p>Contact Info:</p>
+      <p><input id="email" placeholder="E-mail..." onforminput="validateEmail()" oninput="this.className = ''" name="email" type="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required></p>
+    </div>
+    <div id="map" class="tab">
+      <p>Select at least one of your favorite map(s):</p>
+      <div class="map-img">
+        <ul id="maps-list">
+          <div class="map-img">
+            <li><input type="checkbox" id="map1" oninput="this.className = ''" name="ascent"><label for="map1"><img src="assets/maps/m-_ascent-pv.webp" alt="Ascent map"></label></input></li>
+            <li><input type="checkbox" id="map4" oninput="this.className = ''" name="fracture"><label for="map4"><img src="assets/maps/m-_fracture-pv.webp" alt="Fracture map"></label></input></li>
+            <li><input type="checkbox" id="map7" oninput="this.className = ''" name="lotus"><label for="map7"><img src="assets/maps/m-_lotus-pv.webp" alt="Lotus map"></label></input></li>
+            </div>
+            <div class="map-img">
+            <li><input type="checkbox" id="map2" oninput="this.className = ''" name="bind"><label for="map2"><img src="assets/maps/m-_bind-pv.webp" alt="Bind map"></label></input></li>
+            <li><input type="checkbox" id="map5" oninput="this.className = ''" name="haven"><label for="map5"><img src="assets/maps/m-_haven-pv.webp" alt="Haven map"></label></input></li>
+            <li><input type="checkbox" id="map8" oninput="this.className = ''" name="pearl"><label for="map8"><img src="assets/maps/m-_pearl-pv.webp" alt="Pearl map"></label></input></li>
+            <li><input type="checkbox" id="map10" oninput="this.className = ''" name="sunset"><label for="map10"><img src="assets/maps/m-_sunset-pv.webp" alt="Sunset map"></label></input></li>
+            </div>
+            <div class="map-img">
+            <li><input type="checkbox" id="map3" oninput="this.className = ''" name="breeze"><label for="map3"><img src="assets/maps/m-_breeze-pv.webp" alt="Breeze map"></label></input></li>
+            <li><input type="checkbox" id="map6" oninput="this.className = ''" name="icebox"><label for="map6"><img src="assets/maps/m-_icebox-pv.webp" alt="Icebox map"></label></input></li>
+            <li><input type="checkbox" id="map9" oninput="this.className = ''" name="split"><label for="map9"><img src="assets/maps/m-_split-pv.webp" alt="Split map"></label></input></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div id="character" class="tab">
+      <p>Select at least one of your favorite character(s):</p>
+      <ul id="char-list">
+        <div id="grid-layout-char">
+          <div class="division">
+            <li><input type="checkbox" id="char1" name="astra" oninput="this.className = ''"><label for="char1"><img src="assets/agents/astra.webp" alt="astra"></label></input></li>
+            <div class="name">
+              <span>ASTRA</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char2" name="breach" oninput="this.className = ''"><label for="char2"><img src="assets/agents/breach.webp" alt="breach"></label></input></li>
+            <div class="name">
+              <span>BREACH</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char3" name="brimstone" oninput="this.className = ''"><label for="char3"><img src="assets/agents/brimstone.webp" alt="brimstone"></label></input></li>
+            <div class="name">
+              <span>BRIMSTONE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char4" name="chamber" oninput="this.className = ''"><label for="char4"><img src="assets/agents/chamber.webp" alt="chamber"></label></input></li>
+            <div class="name">
+              <span>CHAMBER</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char5" name="clove" oninput="this.className = ''"><label for="char5"><img src="assets/agents/clove.webp" alt="clove"></label></input></li>
+            <div class="name">
+              <span>CLOVE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char6" name="cypher" oninput="this.className = ''"><label for="char6"><img src="assets/agents/cypher.webp" alt="cypher"></label></input></li>
+            <div class="name">
+              <span>CYPHER</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char7" name="deadlock" oninput="this.className = ''"><label for="char7"><img src="assets/agents/deadlock.webp" alt="deadlock"></label></input></li>
+            <div class="name">
+              <span>DEADLOCK</span>
+            </div>
+            </div>
+          <div class="division">
+            <li><input type="checkbox" id="char8" name="fade" oninput="this.className = ''"><label for="char8"><img src="assets/agents/fade.webp" alt="fade"></label></input></li>
+            <div class="name">
+              <span>FADE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char9" name="gekko" oninput="this.className = ''"><label for="char9"><img src="assets/agents/gekko.webp" alt="gekko"></label></input></li>
+            <div class="name">
+              <span>GEKKO</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char10" name="harbor" oninput="this.className = ''"><label for="char10"><img src="assets/agents/harbor.webp" alt="harbor"></label></input></li>
+            <div class="name">
+              <span>HARBOR</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char11" name="iso" oninput="this.className = ''"><label for="char11"><img src="assets/agents/iso.webp" alt="iso"></label></input></li>
+            <div class="name">
+              <span>ISO</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char12" name="jett" oninput="this.className = ''"><label for="char12"><img src="assets/agents/jett.webp" alt="jett"></label></input></li>
+            <div class="name">
+              <span>JETT</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char13" name="kayo" oninput="this.className = ''"><label for="char13"><img src="assets/agents/kayo.webp" alt="kayo"></label></input></li>
+            <div class="name">
+              <span>KAY/O</span>
+            </div>
+           </div>
+          <div class="division">
+            <li><input type="checkbox" id="char14" name="killjoy" oninput="this.className = ''"><label for="char14"><img src="assets/agents/killjoy.webp" alt="killjoy"></label></input></li>
+            <div class="name">
+              <span>KILLJOY</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char15" name="neon" oninput="this.className = ''"><label for="char15"><img src="assets/agents/neon.webp" alt="neon"></label></input></li>
+            <div class="name">
+              <span>NEON</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char16" name="omen" oninput="this.className = ''"><label for="char16"><img src="assets/agents/omen.webp" alt="omen"></label></input></li>
+            <div class="name">
+              <span>OMEN</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char17" name="phoenix" oninput="this.className = ''"><label for="char17"><img src="assets/agents/phoenix.webp" alt="phoenix"></label></input></li>
+            <div class="name">
+              <span>PHOENIX</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char18" name="raze" oninput="this.className = ''"><label for="char18"><img src="assets/agents/raze.webp" alt="raze"></label></input></li>
+            <div class="name">
+              <span>RAZE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char19" name="reyna" oninput="this.className = ''"><label for="char19"><img src="assets/agents/reyna.webp" alt="reyna"></label></input></li>
+            <div class="name">
+              <span>REYNA</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char20" name="sage" oninput="this.className = ''"><label for="char20"><img src="assets/agents/sage.webp" alt="sage"></label></input></li>
+            <div class="name">
+              <span>SAGE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char21" name="skye" oninput="this.className = ''"><label for="char21"><img src="assets/agents/skye.webp" alt="skye"></label></input></li>
+            <div class="name">
+              <span>SKYE</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char22" name="sova" oninput="this.className = ''"><label for="char22"><img src="assets/agents/sova.webp" alt="sova"></label></input></li>
+            <div class="name">
+              <span>SOVA</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char23" name="viper" oninput="this.className = ''"><label for="char23"><img src="assets/agents/viper.webp" alt="viper"></label></input></li>
+            <div class="name">
+              <span>VIPER</span>
+            </div>
+          </div>
+          <div class="division">
+            <li><input type="checkbox" id="char24" name="yoru" oninput="this.className = ''"><label for="char24"><img src="assets/agents/yoru.webp" alt="yoru"></label></input></li>
+            <div class="name">
+              <span>YORU</span>
+            </div>
+          </div>
+      </div>
+      </ul>
+    </div>
+    <div id="pistol" class="tab">
+      <p>Select at least one of your favorite secondary weapon(s):</p>
+      <ul id="pistols">
+        <div id="grid-layout-sec">
+        <div class="division-weap">
+          <li><input type="checkbox" id="pistol1" name="classic" oninput="this.className = ''"><label for="pistol1"><img id="classic-img" src="assets/weapon/secondary/classic.webp" alt="classic"></label></input></li>
+          <div class="name-sec">
+            <span>CLASSIC</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="pistol2" name="frenzy" oninput="this.className = ''"><label for="pistol2"><img src="assets/weapon/secondary/frenzy.webp" alt="frenzy"></label></input></li>
+          <div class="name-sec">
+            <span>FRENZY</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="pistol3" name="ghost" oninput="this.className = ''"><label for="pistol3"><img src="assets/weapon/secondary/ghost.webp" alt="ghost"></label></input></li>
+          <div class="name-sec">
+            <span>GHOST</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="pistol4" name="sheriff" oninput="this.className = ''"><label for="pistol4"><img src="assets/weapon/secondary/sheriff.webp" alt="sheriff"></label></input></li>
+          <div class="name-sec">
+            <span>SHERIFF</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="pistol5" name="shorty" oninput="this.className = ''"><label for="pistol5"><img src="assets/weapon/secondary/shorty.webp" alt="shorty"></label></input></li>
+          <div class="name-sec">
+            <span>SHORTY</span>
+          </div>
+        </div>
+      </div>
+      </ul>
+    </div>
+    <div id="primary" class="tab">
+      <p>Select at least one of your favorite primary weapon(s):</p>
+      <ul id="primaries">
+        <div id="grid-layout-pri">
+        <div class="division-weap">
+          <li><input type="checkbox" id="primary1" name="ares" oninput="this.className = ''"><label for="primary1"><img id="classic-img" src="assets/weapon/primary/ares.webp" alt=""></label></input></li>
+          <div class="name-pri">
+            <span>ARES</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="primary2" name="bucky" oninput="this.className = ''"><label for="primary2"><img src="assets/weapon/primary/bucky.webp" alt=""></label></input></li>
+          <div class="name-pri">
+            <span>BUCKY</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="primary3" name="bulldog" oninput="this.className = ''"><label for="primary3"><img src="assets/weapon/primary/bulldog.webp" alt=""></label></input></li>
+          <div class="name-pri">
+            <span>BULLDOG</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="primary4" name="guardian" oninput="this.className = ''"><label for="primary4"><img src="assets/weapon/primary/guardian.webp" alt=""></label></input></li>
+          <div class="name-pri">
+            <span>GUARDIAN</span>
+          </div>
+        </div>
+        <div class="division-weap">
+          <li><input type="checkbox" id="primary5" name="judge" oninput="this.className = ''"><label for="primary5"><img src="assets/weapon/primary/judge.webp" alt=""></label></input></li>
+          <div class="name-pri">
+            <span>JUDGE</span>
+          </div>
+        </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary6" name="marshal" oninput="this.className = ''"><label for="primary6"><img id="classic-img" src="assets/weapon/primary/marshal.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>MARSHAL</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary7" name="odin" oninput="this.className = ''"><label for="primary7"><img src="assets/weapon/primary/odin.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>ODIN</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary8" name="operator" oninput="this.className = ''"><label for="primary8"><img src="assets/weapon/primary/operator.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>OPERATOR</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary9" name="outlaw" oninput="this.className = ''"><label for="primary9"><img src="assets/weapon/primary/outlaw.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>OUTLAW</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary10" name="phantom" oninput="this.className = ''"><label for="primary10"><img src="assets/weapon/primary/phantom.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>PHANTOM</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary11" name="spectre" oninput="this.className = ''"><label for="primary11"><img src="assets/weapon/primary/spectre.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>SPECTRE</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary12" name="stinger" oninput="this.className = ''"><label for="primary12"><img src="assets/weapon/primary/stinger.webp" alt=""></label></input></li>
+            <div class="name-pri">
+              <span>STINGER</span>
+            </div>
+          </div>
+          <div class="division-weap">
+            <li><input type="checkbox" id="primary13" name="vandal" oninput="this.className = ''"><label for="primary13"><img src="assets/weapon/primary/vandal.webp" alt="vandal"></label></input></li>
+            <div class="name-pri">
+              <span>VANDAL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </ul>
+    </div>
+    <div class="bottom-row">
+      <div class="bottom-left-void">
+        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+      </div>
+      <div class="step-align">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+      <div class="button-layout">
+        <button type="button" id="nextBtn" value="Submit" onclick="nextPrev(1)">Next</button>
+      </div>
+    </div>
+  </form>
+    <div id="footer-division">
+      <p id="content">This form is not an official document and is for educational purposes only. The information collected on this form will be used by <a>Kojo</a> to process information and test it in other projects. I will not share your information with any third parties. </p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
