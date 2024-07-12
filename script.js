@@ -7,9 +7,9 @@ function showTab(n) {
   x[n].style.display = "flex";
   //... and fix the Previous/Next buttons:
   if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
+    document.getElementById("prevBtn").style.visibility = "hidden";
   } else {
-    document.getElementById("prevBtn").style.display = "inline";
+    document.getElementById("prevBtn").style.visibility = "visible";
   }
   if (n == (x.length - 1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
