@@ -70,7 +70,10 @@ function fixStepIndicator(n) {
     //... and adds the "active" class on the current step:
     x[n].className += " active";
   }
-  
+function mobileDevice() {
+  if(window.innerwidth < 434) {
+    return
+  }
 document.addEventListener('DOMContentLoaded', function() {
   let divisions = document.getElementsByClassName("division");
   let chars = document.getElementsByClassName("name");
@@ -105,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chars[i].style.backgroundColor = "rgb(15, 25, 35)";
     }
   }
-});
+})} ;
 
 document.addEventListener('DOMContentLoaded', function() {
   let divisionsWeap = document.getElementsByClassName("division-weap");
