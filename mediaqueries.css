@@ -1,3 +1,28 @@
+@media (hover: hover) and (pointer: fine) {
+  label[for^="char"] img:hover {
+    transition: 0,5s ease-in;
+    transform: scale(1.1);
+    filter: brightness(100%) grayscale(0%);
+  }
+
+   
+  label[for^="pistol"] img:hover {
+    transition: 0,5s ease-in;
+    transform: scale(1.01);
+    filter: brightness(100%) grayscale(0%);
+  }
+
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  label[for^="primary"] img:hover {
+    transition: 0,5s ease-in;
+    transform: scale(1.01);
+    filter: brightness(100%) grayscale(0%);
+  }
+}
  @media screen and (min-width: 1028px) and (max-width: 1420px) {
     #survey-form {
         width: 60%;
@@ -218,5 +243,4 @@
         left: 50%;
         transform: translateX(0%);
     }
-
  }

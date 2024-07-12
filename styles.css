@@ -123,9 +123,6 @@ html {
     color: var(--color-white);
   }
   
-  button:hover {
-    opacity: 0.8;
-  }
 
   .bottom-row {
     display: flex;
@@ -305,12 +302,7 @@ html {
     transition: 0.5s;
     filter: brightness(75%) grayscale(100%);
   }
-  
-  label[for^="char"] img:hover {
-    transition: 0,5s ease-in;
-    transform: scale(1.1);
-    filter: brightness(100%) grayscale(0%);
-  }
+ 
 
   :checked + label[for^="char"] {
     border-color: var(--color-red-light);
@@ -378,13 +370,7 @@ html {
     transition: 0.5s;
     filter: brightness(35%) grayscale(80%);
   }
-  
-  label[for^="pistol"] img:hover {
-    transition: 0,5s ease-in;
-    transform: scale(1.01);
-    filter: brightness(100%) grayscale(0%);
-  }
-
+ 
   :checked + label[for^="pistol"] {
     border-color: var(--color-red-light);
   }
@@ -461,12 +447,6 @@ html {
     width: 100%;
     transition: 0.5s;
     filter: brightness(35%) grayscale(80%);
-  }
-  
-  label[for^="primary"] img:hover {
-    transition: 0,5s ease-in;
-    transform: scale(1.01);
-    filter: brightness(100%) grayscale(0%);
   }
 
   :checked + label[for^="primary"] {

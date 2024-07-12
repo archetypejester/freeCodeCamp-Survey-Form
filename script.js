@@ -70,10 +70,6 @@ function fixStepIndicator(n) {
     //... and adds the "active" class on the current step:
     x[n].className += " active";
   }
-function mobileDevice() {
-  if(window.innerwidth < 434) {
-    return
-  }
 document.addEventListener('DOMContentLoaded', function() {
   let divisions = document.getElementsByClassName("division");
   let chars = document.getElementsByClassName("name");
@@ -108,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chars[i].style.backgroundColor = "rgb(15, 25, 35)";
     }
   }
-})} ;
+});
 
 document.addEventListener('DOMContentLoaded', function() {
   let divisionsWeap = document.getElementsByClassName("division-weap");
@@ -158,16 +154,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-document.addEventListener('blur', function (event) {
-  const isValid = event.target.validty.valid;
-  const message = event.target.validationMessage;
-  const connectedValidationId = event.target.getAttribute('aria-describedby');
-  const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
-  if (connectedValidation && message && !isValid) {
-    connectedValidation.innerText = message;
-  } else {
-    connectedValidation.innerText = '';
-  }
-}, true);
+if (!isMobile()) {
+  let label = document.querySelectorAll(char);
+  label.classList.remove()
+}
 
+// Adicionar classe em cada checkbox pra remover o hover effect //
