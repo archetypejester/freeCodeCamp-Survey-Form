@@ -23,6 +23,7 @@
     filter: brightness(100%) grayscale(0%);
   }
 }
+
  @media screen and (min-width: 1028px) and (max-width: 1420px) {
     #survey-form {
         width: 60%;
@@ -32,10 +33,23 @@
         width: 60%;
     }
 
+    #grid-layout-map {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
     
     #grid-layout-char {
         grid-template-columns: repeat(5, 1fr);
     }
+
+      #grid-layout-sec {
+        grid-template-columns: repeat(3, 1fr);
+      } 
+
+      #grid-layout-pri {
+        grid-template-columns: repeat(3, 1fr);
+      }   
+ 
 
     .name {
         font-size: 1.2rem;
@@ -50,6 +64,10 @@
 
     :checked + label[for^="map"]:before {
         font-size: 1em;
+    }
+
+    :checked + label[for^="map"] img {
+        border: 4px solid var(--color-red-light);
     }
  }
 
@@ -68,12 +86,21 @@
 
     #grid-layout-map {
         grid-template-columns: repeat(2, 1fr);
-      }    
-
+        gap: 5px;
+    }
     
     #grid-layout-char {
         grid-template-columns: repeat(4, 1fr);
     }
+
+      #grid-layout-sec {
+        grid-template-columns: repeat(3, 1fr);
+      } 
+
+      #grid-layout-pri {
+        grid-template-columns: repeat(3, 1fr);
+      }   
+ 
 
     .name {
         font-size: 1rem;
@@ -110,12 +137,22 @@
     }
 
     #grid-layout-char {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
     
     #grid-layout-map {
         grid-template-columns: repeat(2, 1fr);
+      }  
+      
+      #grid-layout-sec {
+        grid-template-columns: repeat(2, 1fr);
+      } 
+
+      #grid-layout-pri {
+        grid-template-columns: repeat(2, 1fr);
       }   
+ 
+
 
     .name {
         font-size: 0.9rem;
@@ -126,10 +163,6 @@
 
     .name-sec {
         font-size: 1rem;
-    }
-
-    #grid-layout-pri {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .name-pri {
@@ -164,6 +197,7 @@
     #survey-form {
         width: 95%;
         margin: 15px auto;
+        padding: 15px;
     }
 
     h1 {
@@ -188,6 +222,14 @@
     #grid-layout-char {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    #grid-layout-pri {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #grid-layout-sec {
+        grid-template-columns: repeat(2, 1fr);
+    }
     
     .name {
         font-size: 0.9rem;
@@ -198,10 +240,6 @@
 
     .name-sec {
         font-size: 1rem;
-    }
-
-    #grid-layout-pri {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .name-pri {

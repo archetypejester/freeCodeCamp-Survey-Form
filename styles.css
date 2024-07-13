@@ -368,7 +368,7 @@ html {
   label[for^="pistol"] img {
     width: 100%;
     transition: 0.5s;
-    filter: brightness(35%) grayscale(80%);
+    filter: brightness(35%) opacity(50%);
   }
  
   :checked + label[for^="pistol"] {
@@ -387,7 +387,7 @@ html {
   :checked + label[for^="pistol"] img {
     z-index: -1;
     transform: scale(1.01);
-    filter: brightness(100%) grayscale(0%);
+    filter: brightness(100%) opacity(100%);
   }
 
   .name-sec {
@@ -446,7 +446,7 @@ html {
   label[for^="primary"] img {
     width: 100%;
     transition: 0.5s;
-    filter: brightness(35%) grayscale(80%);
+    filter: brightness(35%) opacity(50%);
   }
 
   :checked + label[for^="primary"] {
@@ -465,7 +465,7 @@ html {
   :checked + label[for^="primary"] img {
     z-index: -1;
     transform: scale(1.01);
-    filter: brightness(100%) grayscale(0%);
+    filter: brightness(100%) opacity(100%);
   }
 
   .name-pri {
